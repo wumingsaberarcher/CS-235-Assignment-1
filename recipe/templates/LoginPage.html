@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>登录 - logo</title>
+    <title>Login - logo</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
@@ -37,27 +37,29 @@
 <body class="min-h-[1024px] bg-gray-50 flex items-center justify-center">
     <div class="w-[1440px] min-h-[1024px] flex items-center justify-center relative">
         <div class="absolute top-8 left-8">
-            <a href="/" class="text-3xl font-['Pacifico'] text-primary">logo</a>
+            <a href="MainPage.html" class="logo-link">
+                <img src="../static/Iron_warrior.png" alt="Website Logo" width="120" height="auto">
+            </a>
         </div>
         
         <div class="w-[400px] bg-white rounded-lg shadow-lg p-8">
             <div class="text-center mb-8">
-                <h1 class="text-2xl font-bold text-gray-900">登录账户</h1>
-                <p class="mt-2 text-gray-600">欢迎回来，请输入您的账户信息</p>
+                <h1 class="text-2xl font-bold text-gray-900">Log in to Your Account</h1>
+                <p class="mt-2 text-gray-600">Welcome back, please enter your account details</p>
             </div>
 
             <form class="space-y-6">
                 <div>
-                    <label class="block text-sm font-medium text-gray-700 mb-2">邮箱/用户名</label>
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Email/Username</label>
                     <div class="relative">
-                        <input type="text" class="w-full h-[44px] px-4 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="请输入邮箱或用户名">
+                        <input type="text" class="w-full h-[44px] px-4 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="Enter email or username">
                     </div>
                 </div>
 
                 <div>
-                    <label class="block text-sm font-medium text-gray-700 mb-2">密码</label>
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Password</label>
                     <div class="relative">
-                        <input type="password" class="w-full h-[44px] px-4 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="请输入密码">
+                        <input type="password" class="w-full h-[44px] px-4 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="Enter password">
                         <button type="button" class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-700">
                             <i class="far fa-eye text-lg w-5 h-5 flex items-center justify-center"></i>
                         </button>
@@ -67,26 +69,26 @@
                 <div class="flex items-center justify-between">
                     <div class="flex items-center">
                         <input type="checkbox" class="h-4 w-4 text-primary border-gray-300 rounded">
-                        <label class="ml-2 text-sm text-gray-700">记住我</label>
+                        <label class="ml-2 text-sm text-gray-700">Remember me</label>
                     </div>
-                    <a href="#" class="text-sm text-primary hover:text-primary/80">忘记密码？</a>
+                    <a href="#" class="text-sm text-primary hover:text-primary/80">Forgot Password?</a>
                 </div>
 
                 <button type="submit" class="!rounded-button w-full h-[44px] bg-primary text-white font-medium hover:bg-primary/90 transition-colors whitespace-nowrap">
-                    登录
+                    Log In
                 </button>
 
                 <div class="text-center">
                     <p class="text-sm text-gray-600">
-                        还没有账户？
-                        <a href="#" class="text-primary hover:text-primary/80 font-medium">立即注册</a>
+                        Don’t have an account?
+                        <a href="RegisterPage.html" class="text-primary hover:text-primary/80 font-medium">Sign Up Now</a>
                     </p>
                 </div>
             </form>
         </div>
 
         <div class="absolute bottom-8 w-full text-center text-gray-500 text-sm">
-            <p>© 2024 logo. 保留所有权利</p>
+            <p>© 2024 Li Tiancheng. All rights reserved.</p>
         </div>
     </div>
 

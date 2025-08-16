@@ -13,12 +13,12 @@
         </div>
         <nav>
             <ul>
-                <button class="btn btn-primary">Create Recipe</button>
-                <button class="btn btn-secondary">Favorites</button>
-                <button class="btn btn-primary">Login / Register</button>
+                <li><button class="btn btn-primary" aria-label="Create a new recipe">Create Recipe</button></li>
+                <li><button class="btn btn-secondary" aria-label="View favorite recipes">Favorites</button></li>
+                <li><a href="LoginPage.html" class="btn btn-primary" aria-label="Log in or register for an account">Login / Register</a></li>
             </ul>
         </nav>
-    </header>
+</header>
 
     <main>
         <section class="hero">
@@ -75,18 +75,18 @@
         </section>
 
         <section class="themes">
-            <h2>Selected Themes</h2>
-            <div class="theme-grid">
-                <div>
-                    <h3>Healthy Light Meals</h3>
-                    <p>Discover new ways of delicious and healthy eating</p>
-                </div>
-                <div>
-                    <h3>Traditional Cuisine</h3>
-                    <p>Inherit classics, taste the flavor of home</p>
-                </div>
-            </div>
-        </section>
+        <h2>Selected Themes</h2>
+        <div class="theme-grid">
+            <a href="/themes/healthy" class="theme-item theme-healthy" aria-label="Explore healthy light meals">
+                <h3>Healthy Light Meals</h3>
+                <p>Discover new ways of delicious and healthy eating</p>
+            </a>
+            <a href="/themes/traditional" class="theme-item theme-traditional" aria-label="Explore traditional cuisine">
+                <h3>Traditional Cuisine</h3>
+                <p>Inherit classics, taste the flavor of home</p>
+            </a>
+        </div>
+</section>
 
         <section class="authors">
             <h2>Recommended Authors</h2>

@@ -208,19 +208,96 @@ header nav ul li {
     font-weight: bold;
 }
 
-/* 主题 */
-.themes .theme-grid {
+.theme-grid {
     display: flex;
     justify-content: space-around;
     padding: 2rem;
+    gap: 1.5rem; /* 稍大间距，匹配更大卡片 */
 }
 
-.theme-grid div {
-    width: 40%;
-    padding: 1rem;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+.theme-item {
+    flex: 1;
+    min-height: 200px; /* 更大高度，相比 category-item 的 120px */
+    display: flex;
+    flex-direction: column; /* 垂直排列 h3 和 p */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #ffffff;
+    font-size: 1.5rem; /* 更大字体 */
+    font-weight: 600;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.75rem; /* 稍大圆角，匹配更大尺寸 */
+    transition: transform 0.2s ease;
+    text-decoration: none;
+    padding: 1rem; /* 增加内边距，适应更大卡片 */
+}
+
+.theme-item h3 {
+    margin: 0 0 0.5rem 0; /* 标题与描述间距 */
+    font-size: 1.75rem; /* 更大标题 */
+}
+
+.theme-item p {
+    margin: 0;
+    font-size: 1rem; /* 描述字体稍大 */
+    max-width: 80%; /* 限制描述宽度，避免过长 */
+}
+
+.theme-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    filter: blur(40%); /* 与 category-grid 一致的虚化效果 */
+    z-index: -1;
+    opacity: 0.8;
+}
+
+.theme-healthy::before {
+    background-image: url('../健康轻食.jpg'); /* 适合健康轻食的图片 */
+}
+.theme-traditional::before {
+    background-image: url('../传统美食.jpg'); /* 适合传统美食的图片 */
+}
+
+.theme-item::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); /* 半透明遮罩，与 category-grid 一致 */
+    z-index: -1;
+}
+
+.theme-item:hover {
+    transform: scale(1.05); /* 与 category-grid 一致的悬停放大 */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 640px) {
+    .theme-grid {
+        flex-direction: column;
+        padding: 1rem;
+    }
+    .theme-item {
+        min-height: 150px; /* 移动设备上稍减小高度 */
+        font-size: 1.25rem;
+    }
+    .theme-item h3 {
+        font-size: 1.5rem;
+    }
+    .theme-item p {
+        font-size: 0.875rem;
+    }
 }
 
 /* 作者 */

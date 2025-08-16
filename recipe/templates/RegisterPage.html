@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>创建账户</title>
+    <title>Create Account</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
@@ -34,13 +34,6 @@
         }
     </script>
     <style>
-        body {
-            min-height: 1024px;
-            background-image: url('https://ai-public.mastergo.com/ai/img_res/32df49fa3a3e2730bf42f3c2d60af483.jpg');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-        }
         input::-webkit-outer-spin-button,
         input::-webkit-inner-spin-button {
             -webkit-appearance: none;
@@ -52,27 +45,32 @@
         }
     </style>
 </head>
-<body class="flex items-center justify-center font-['Roboto']">
-    <div class="w-[1440px] min-h-[1024px] flex items-center justify-center px-4">
+<body class="min-h-[1024px] bg-gray-50 flex items-center justify-center font-['Roboto']">
+    <div class="w-[1440px] min-h-[1024px] flex items-center justify-center px-4 relative">
+        <div class="absolute top-8 left-8">
+            <a href="MainPage.html" class="logo-link">
+                <img src="../static/Iron_warrior.png" alt="Website Logo" width="120" height="auto">
+            </a>
+        </div>
         <div class="w-[400px] bg-white rounded-lg shadow-xl p-8">
             <div class="text-center mb-8">
-                <h1 class="text-2xl font-bold mb-2">创建账户</h1>
-                <p class="text-gray-600">开启您的美食探索之旅</p>
+                <h1 class="text-2xl font-bold mb-2">Create Account</h1>
+                <p class="text-gray-600">Start your culinary exploration journey</p>
             </div>
             
             <form class="space-y-6">
                 <div>
-                    <label class="block text-sm font-medium text-gray-700 mb-1">用户名</label>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Username</label>
                     <div class="relative">
                         <span class="absolute inset-y-0 left-0 pl-3 flex items-center text-gray-400">
                             <i class="fas fa-user text-sm"></i>
                         </span>
-                        <input type="text" class="form-input w-full pl-10 pr-3 py-2 text-sm border border-gray-300 rounded-button" placeholder="请输入4-20个字符">
+                        <input type="text" class="form-input w-full pl-10 pr-3 py-2 text-sm border border-gray-300 rounded-button" placeholder="Enter 4-20 characters">
                     </div>
                 </div>
 
                 <div>
-                    <label class="block text-sm font-medium text-gray-700 mb-1">邮箱地址</label>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
                     <div class="relative">
                         <span class="absolute inset-y-0 left-0 pl-3 flex items-center text-gray-400">
                             <i class="fas fa-envelope text-sm"></i>
@@ -82,43 +80,43 @@
                 </div>
 
                 <div>
-                    <label class="block text-sm font-medium text-gray-700 mb-1">设置密码</label>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Set Password</label>
                     <div class="relative">
                         <span class="absolute inset-y-0 left-0 pl-3 flex items-center text-gray-400">
                             <i class="fas fa-lock text-sm"></i>
                         </span>
-                        <input type="password" class="form-input w-full pl-10 pr-3 py-2 text-sm border border-gray-300 rounded-button" placeholder="请输入8-20位密码">
+                        <input type="password" class="form-input w-full pl-10 pr-3 py-2 text-sm border border-gray-300 rounded-button" placeholder="Enter 8-20 characters">
                     </div>
                 </div>
 
                 <div>
-                    <label class="block text-sm font-medium text-gray-700 mb-1">确认密码</label>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Confirm Password</label>
                     <div class="relative">
                         <span class="absolute inset-y-0 left-0 pl-3 flex items-center text-gray-400">
                             <i class="fas fa-lock text-sm"></i>
                         </span>
-                        <input type="password" class="form-input w-full pl-10 pr-3 py-2 text-sm border border-gray-300 rounded-button" placeholder="请再次输入密码">
+                        <input type="password" class="form-input w-full pl-10 pr-3 py-2 text-sm border border-gray-300 rounded-button" placeholder="Re-enter your password">
                     </div>
                 </div>
 
                 <div>
                     <button type="submit" class="w-full bg-primary text-white py-2 px-4 rounded-button hover:bg-primary/90 transition-colors duration-200 !rounded-button whitespace-nowrap">
-                        立即注册
+                        Sign Up Now
                     </button>
                 </div>
             </form>
 
             <div class="mt-6 flex items-center justify-between">
-                <a href="#" class="text-sm text-secondary hover:underline">已有账户？立即登录</a>
-                <a href="#" class="text-sm text-secondary hover:underline">忘记密码？</a>
+                <a href="LoginPage.html" class="text-sm text-secondary hover:underline">Already have an account? Log in now</a>
+                <a href="#" class="text-sm text-secondary hover:underline">Forgot Password?</a>
             </div>
 
             <div class="mt-8 pt-6 border-t border-gray-200">
-                <p class="text-center text-sm text-gray-600">注册即表示同意</p>
+                <p class="text-center text-sm text-gray-600">By registering, you agree to the</p>
                 <div class="mt-2 flex items-center justify-center space-x-2 text-sm">
-                    <a href="#" class="text-secondary hover:underline">用户协议</a>
-                    <span class="text-gray-400">和</span>
-                    <a href="#" class="text-secondary hover:underline">隐私政策</a>
+                    <a href="#" class="text-secondary hover:underline">User Agreement</a>
+                    <span class="text-gray-400">and</span>
+                    <a href="#" class="text-secondary hover:underline">Privacy Policy</a>
                 </div>
             </div>
         </div>
