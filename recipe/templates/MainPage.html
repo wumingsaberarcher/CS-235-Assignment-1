@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover Delicious Recipes</title>
+    <link rel="stylesheet" href="../static/css/main.css">  <!-- Use Jinja to load CSS for consistency -->
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="../static/Iron_warrior.png" alt="Website Logo" width="150">
+        </div>
+        <nav>
+            <ul>
+                <button class="btn btn-primary">Create Recipe</button>
+                <button class="btn btn-secondary">Favorites</button>
+                <button class="btn btn-primary">Login / Register</button>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Discover Delicious Recipes</h1>
+            <p>Explore thousands of selected recipes, making cooking simple and fun</p>
+            <button>Start Exploring</button>
+        </section>
+
+        <!-- Recipe of the Day Section -->
+        <section class="recipe-of-the-day">
+            <h2>Recipe of the Day</h2>
+            <div class="recipe-card">
+                <img src="../static/意大利面.jpg" alt="Recipe of the Day">  <!-- Assumed image; replace with actual -->
+                <h3>Classic Tomato Pasta</h3>
+                <p>Author: Chen Jiahui | Rating: 4.8</p>
+                <p>Simple and easy to make, suitable for daily dinner.</p>
+                <button>View Details</button>
+            </div>
+        </section>
+
+        <section class="categories">
+            <h2>Popular Categories</h2>
+            <div class="category-grid">
+                <a href="/recipes/breakfast" class="category-item category-breakfast" aria-label="Browse breakfast recipes">Breakfast</a>
+                <a href="/recipes/lunch" class="category-item category-lunch" aria-label="Browse lunch recipes">Lunch</a>
+                <a href="/recipes/dinner" class="category-item category-dinner" aria-label="Browse dinner recipes">Dinner</a>
+                <a href="/recipes/desserts" class="category-item category-desserts" aria-label="Browse desserts recipes">Desserts</a>
+</div>
+        </section>
+
+        <section class="latest-recipes">
+            <h2>Selected Recipes</h2>
+            <div class="tabs">
+                <span>Latest Releases</span>
+                <span>Most Popular</span>
+            </div>
+            <div class="recipe-grid">
+                <div class="recipe-card">
+                    <h3>Classic Tomato Pasta</h3>
+                    <p>Chen Jiahui</p>
+                    <span>4.8</span>
+                </div>
+                <div class="recipe-card">
+                    <h3>Pan-Fried Salmon with Seasonal Vegetables</h3>
+                    <p>Wang Siyuan</p>
+                    <span>4.9</span>
+                </div>
+                <div class="recipe-card">
+                    <h3>Colorful Fruit Energy Bowl</h3>
+                    <p>Lin Meiqi</p>
+                    <span>4.7</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="themes">
+            <h2>Selected Themes</h2>
+            <div class="theme-grid">
+                <div>
+                    <h3>Healthy Light Meals</h3>
+                    <p>Discover new ways of delicious and healthy eating</p>
+                </div>
+                <div>
+                    <h3>Traditional Cuisine</h3>
+                    <p>Inherit classics, taste the flavor of home</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="authors">
+            <h2>Recommended Authors</h2>
+            <a href="#">View More</a>
+            <div class="author-grid">
+                <div class="author-card">
+                    <h3>Zhang Meichu</h3>
+                    <p>Michelin Star Chef</p>
+                    <button>Follow</button>
+                </div>
+                <div class="author-card">
+                    <h3>Li Tiandian</h3>
+                    <p>Famous Pastry Chef</p>
+                    <button>Follow</button>
+                </div>
+                <div class="author-card">
+                    <h3>Wang Jiachang</h3>
+                    <p>Home Cooking Expert</p>
+                    <button>Follow</button>
+                </div>
+                <div class="author-card">
+                    <h3>Liu Chuangyi</h3>
+                    <p>Creative Cuisine Expert</p>
+                    <button>Follow</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <h2>Discover Deliciousness, Share Happiness</h2>
+        <div class="footer-sections">
+            <div>
+                <h3>About Us</h3>
+                <ul>
+                    <li>About Us</li>
+                    <li>Join Us</li>
+                    <li>Contact Us</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Help Center</h3>
+                <ul>
+                    <li>User Guide</li>
+                    <li>FAQ</li>
+                    <li>Feedback</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Follow Us</h3>
+                <ul>
+                    <li>Discord</li>
+                    <li>Facebook</li>
+                    <li>Instagram</li>
+                </ul>
+            </div>
+        </div>
+        <p>© 2024 Li Tiancheng. All rights reserved.</p>
+    </footer>
+</body>
+</html>

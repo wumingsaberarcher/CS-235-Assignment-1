@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>美食食谱搜索</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#FF6F00',
+                        secondary: '#2563EB'
+                    },
+                    borderRadius: {
+                        'none': '0px',
+                        'sm': '2px',
+                        DEFAULT: '4px',
+                        'md': '8px',
+                        'lg': '12px',
+                        'xl': '16px',
+                        '2xl': '20px',
+                        '3xl': '24px',
+                        'full': '9999px',
+                        'button': '4px'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="min-h-[1024px] bg-gray-50">
+    <nav class="bg-white shadow-sm">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center">
+                    <a href="#" class="text-2xl font-['Pacifico'] text-primary">logo</a>
+                </div>
+                <div class="flex items-center space-x-8">
+                    <a href="#" class="text-gray-700 hover:text-primary">首页</a>
+                    <a href="#" class="text-gray-700 hover:text-primary">食谱分类</a>
+                    <a href="#" class="text-gray-700 hover:text-primary">今日推荐</a>
+                    <a href="#" class="text-gray-700 hover:text-primary">关于我们</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="relative bg-gradient-to-r from-primary/10 to-transparent">
+        <div class="max-w-7xl mx-auto px-4 py-16">
+            <div class="flex flex-col items-center">
+                <h1 class="text-4xl font-bold text-gray-900 mb-4">发现美味食谱</h1>
+                <p class="text-lg text-gray-600 mb-8">搜索超过 10,000+ 精选食谱</p>
+                <div class="w-full max-w-2xl relative">
+                    <input type="text" placeholder="搜索食谱名称、ID 或作者" class="w-full h-14 pl-12 pr-4 rounded-button border-none bg-white shadow-lg focus:ring-2 focus:ring-primary/50 outline-none text-gray-700">
+                    <i class="fas fa-search absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"></i>
+                    <button class="absolute right-2 top-1/2 -translate-y-1/2 bg-primary text-white px-6 py-2 rounded-button hover:bg-primary/90 whitespace-nowrap">
+                        搜索
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 py-12">
+        <h2 class="text-2xl font-bold mb-8">热门分类</h2>
+        <div class="grid grid-cols-4 gap-6">
+            <div class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow">
+                <div class="aspect-w-16 aspect-h-9 relative">
+                    <img src="https://ai-public.mastergo.com/ai/img_res/88ec49c0d6d2d5afde70761c8e698998.jpg" class="w-full h-full object-cover" alt="川菜">
+                </div>
+                <div class="p-4">
+                    <h3 class="text-lg font-semibold">川菜</h3>
+                    <p class="text-sm text-gray-500 mt-1">128 个食谱</p>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow">
+                <div class="aspect-w-16 aspect-h-9 relative">
+                    <img src="https://ai-public.mastergo.com/ai/img_res/7b29a426188a4f834c534dffbda277a0.jpg" class="w-full h-full object-cover" alt="粤菜">
+                </div>
+                <div class="p-4">
+                    <h3 class="text-lg font-semibold">粤菜</h3>
+                    <p class="text-sm text-gray-500 mt-1">96 个食谱</p>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow">
+                <div class="aspect-w-16 aspect-h-9 relative">
+                    <img src="https://ai-public.mastergo.com/ai/img_res/fd8174107eb2ed0b15d747890fc537a9.jpg" class="w-full h-full object-cover" alt="日料">
+                </div>
+                <div class="p-4">
+                    <h3 class="text-lg font-semibold">日料</h3>
+                    <p class="text-sm text-gray-500 mt-1">85 个食谱</p>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow">
+                <div class="aspect-w-16 aspect-h-9 relative">
+                    <img src="https://ai-public.mastergo.com/ai/img_res/8fd0c0abe1f65073a8619d675b7a3064.jpg" class="w-full h-full object-cover" alt="意餐">
+                </div>
+                <div class="p-4">
+                    <h3 class="text-lg font-semibold">意餐</h3>
+                    <p class="text-sm text-gray-500 mt-1">74 个食谱</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 py-12">
+        <h2 class="text-2xl font-bold mb-8">最新食谱</h2>
+        <div class="grid grid-cols-3 gap-6">
+            <div class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow">
+                <div class="aspect-w-16 aspect-h-9 relative">
+                    <img src="https://ai-public.mastergo.com/ai/img_res/53b7427847a43a7119e046ef7e85f2fc.jpg" class="w-full h-full object-cover" alt="麻婆豆腐">
+                </div>
+                <div class="p-4">
+                    <span class="text-xs text-gray-500">#10086</span>
+                    <h3 class="text-lg font-semibold mt-2">正宗麻婆豆腐</h3>
+                    <div class="flex items-center mt-2">
+                        <img src="https://ai-public.mastergo.com/ai/img_res/71e77bd5b8a08f8510b8924f1bc1bbc0.jpg" class="w-8 h-8 rounded-full" alt="作者头像">
+                        <span class="ml-2 text-sm text-gray-600">张美玲</span>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow">
+                <div class="aspect-w-16 aspect-h-9 relative">
+                    <img src="https://ai-public.mastergo.com/ai/img_res/7813a8e36ad041e43e557987cca6a2a4.jpg" class="w-full h-full object-cover" alt="红烧牛肉面">
+                </div>
+                <div class="p-4">
+                    <span class="text-xs text-gray-500">#10085</span>
+                    <h3 class="text-lg font-semibold mt-2">红烧牛肉面</h3>
+                    <div class="flex items-center mt-2">
+                        <img src="https://ai-public.mastergo.com/ai/img_res/c1791d65f64c678f2ba371d3314e80a4.jpg" class="w-8 h-8 rounded-full" alt="作者头像">
+                        <span class="ml-2 text-sm text-gray-600">李志明</span>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow">
+                <div class="aspect-w-16 aspect-h-9 relative">
+                    <img src="https://ai-public.mastergo.com/ai/img_res/928d00a067faa59c9a9dd9ac79b6721a.jpg" class="w-full h-full object-cover" alt="糖醋里脊">
+                </div>
+                <div class="p-4">
+                    <span class="text-xs text-gray-500">#10084</span>
+                    <h3 class="text-lg font-semibold mt-2">糖醋里脊</h3>
+                    <div class="flex items-center mt-2">
+                        <img src="https://ai-public.mastergo.com/ai/img_res/266394ecddf20fc5f7228855241ad8e8.jpg" class="w-8 h-8 rounded-full" alt="作者头像">
+                        <span class="ml-2 text-sm text-gray-600">王建国</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-gray-100 py-12 mt-12">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-2xl font-bold mb-8">本周热门</h2>
+            <div class="grid grid-cols-2 gap-8">
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow">
+                    <div class="flex">
+                        <div class="w-1/2">
+                            <img src="https://ai-public.mastergo.com/ai/img_res/c5ddd2a2dced7f10dc1c2ea72c8f9153.jpg" class="w-full h-full object-cover" alt="北京烤鸭">
+                        </div>
+                        <div class="w-1/2 p-6">
+                            <span class="text-xs text-gray-500">#10083</span>
+                            <h3 class="text-xl font-semibold mt-2">传统北京烤鸭</h3>
+                            <p class="text-gray-600 mt-4">正宗北京烤鸭的制作方法，从腌制到烤制的完整步骤，以及配菜和酱料的准备技巧。</p>
+                            <div class="flex items-center mt-6">
+                                <img src="https://ai-public.mastergo.com/ai/img_res/6121b5af3877704cbef3d74ec93ead49.jpg" class="w-8 h-8 rounded-full" alt="作者头像">
+                                <span class="ml-2 text-sm text-gray-600">赵师傅</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow">
+                    <div class="flex">
+                        <div class="w-1/2">
+                            <img src="https://ai-public.mastergo.com/ai/img_res/0dce99bc34cbc32356b73a51058346ba.jpg" class="w-full h-full object-cover" alt="小笼包">
+                        </div>
+                        <div class="w-1/2 p-6">
+                            <span class="text-xs text-gray-500">#10082</span>
+                            <h3 class="text-xl font-semibold mt-2">上海小笼包</h3>
+                            <p class="text-gray-600 mt-4">详细的小笼包制作教程，包括面皮的调制、馅料的搭配以及包制技巧，让您在家也能做出汤汁丰富的小笼包。</p>
+                            <div class="flex items-center mt-6">
+                                <img src="https://ai-public.mastergo.com/ai/img_res/8f03c392beeddd0e1b91d5e7a2a6e001.jpg" class="w-8 h-8 rounded-full" alt="作者头像">
+                                <span class="ml-2 text-sm text-gray-600">陈师傅</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-gray-800 text-white py-12 mt-12">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">关于我们</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">公司简介</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">加入我们</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">联系方式</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">帮助中心</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">使用指南</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">常见问题</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">意见反馈</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">合作伙伴</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">商务合作</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">广告投放</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">媒体合作</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">关注我们</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-weixin text-2xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-weibo text-2xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-qq text-2xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>© 2024 美食食谱. 保留所有权利</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
