@@ -1,0 +1,76 @@
+<!-- templates/RandomRecipe.html -->
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>随机食谱</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        h1 {
+            color: #333;
+        }
+        .recipe-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .recipe-image {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="recipe-container">
+        <h1>{{ recipe.Name }}</h1>
+        <p><strong>作者:</strong> {{ recipe.AuthorName }}</p>
+        <p><strong>分类:</strong> {{ recipe.RecipeCategory }}</p>
+        <p><strong>描述:</strong> {{ recipe.Description }}</p>
+        {% if recipe.Images %}
+            <p><strong>图片:</strong></p>
+            {% set images = recipe.Images.strip('[]').split(', ') %}
+            {% for image in images %}
+                <img src="{{ image.strip('\'') }}" alt="食谱图片" class="recipe-image" width="200">
+            {% endfor %}
+        {% endif %}
+        <p><strong>准备时间:</strong> {{ recipe.PrepTime }} 分钟</p>
+        <p><strong>烹饪时间:</strong> {{ recipe.CookTime }} 分钟</p>
+        <p><strong>总时间:</strong> {{ recipe.TotalTime }} 分钟</p>
+        <p><strong>原料:</strong></p>
+        <ul>
+            {% set quantities = recipe.RecipeIngredientQuantities.strip('[]').split(', ') %}
+            {% set parts = recipe.RecipeIngredientParts.strip('[]').split(', ') %}
+            {% for qty, part in quantities|zip(parts) %}
+                <li>{{ qty.strip('\'') }} {{ part.strip('\'') }}</li>
+            {% endfor %}
+        </ul>
+        <p><strong>步骤:</strong></p>
+        <ol>
+            {% set instructions = recipe.RecipeInstructions.strip('[]').split(', ') %}
+            {% for instruction in instructions %}
+                <li>{{ instruction.strip('\'') }}</li>
+            {% endfor %}
+        </ol>
+        <p><strong>营养信息:</strong></p>
+        <ul>
+            <li>卡路里: {{ recipe.Calories }} kcal</li>
+            <li>脂肪: {{ recipe.FatContent }} g</li>
+            <li>饱和脂肪: {{ recipe.SaturatedFatContent }} g</li>
+            <li>胆固醇: {{ recipe.CholesterolContent }} mg</li>
+            <li>钠: {{ recipe.SodiumContent }} mg</li>
+            <li>碳水化合物: {{ recipe.CarbohydrateContent }} g</li>
+            <li>纤维: {{ recipe.FiberContent }} g</li>
+            <li>糖: {{ recipe.SugarContent }} g</li>
+            <li>蛋白质: {{ recipe.ProteinContent }} g</li>
+        </ul>
+        <p><strong>份量:</strong> {{ recipe.RecipeServings or '未指定' }}</p>
+        <p><strong>产量:</strong> {{ recipe.RecipeYield or '未指定' }}</p>
+    </div>
+</body>
+</html>
