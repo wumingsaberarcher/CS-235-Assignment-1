@@ -6,6 +6,7 @@
     <title>Welcome to CS235 Recipe Portal</title>
     <!-- Bootstrap CSS for modern, responsive styling -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/main.css"> <!-- Added to support spliced content -->
     <style>
         body {
             background-color: #f8f9fa;
@@ -58,16 +59,166 @@
         <div>
             <h1>Welcome to CS235 Recipe Portal</h1>
             <p>Discover, share, and explore delicious recipes from around the world.</p>
-            <a href="MainPage.html" class="btn btn-custom">Explore Recipes</a>
+            <a class="btn btn-custom" onclick="scrollOnePage()">Explore Recipes</a>
         </div>
     </div>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <p>© 2025 CS235 Recipe Portal | Created by UPI1, UPI2, UPI3</p>
+    <!-- Spliced Recipe Portal Content -->
+    <header>
+        <div class="logo">
+            <img src="../static/Iron_warrior.png" alt="Website Logo" width="150">
+        </div>
+        <nav>
+            <ul>
+                <li><button class="btn btn-primary" aria-label="Create a new recipe">Create Recipe</button></li>
+                <li><button class="btn btn-secondary" aria-label="View favorite recipes">Favorites</button></li>
+                <li><a href="LoginPage.html" class="btn btn-primary" aria-label="Log in or register for an account">Login / Register</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Discover Delicious Recipes</h1>
+            <p>Explore thousands of selected recipes, making cooking simple and fun</p>
+            <button>Start Exploring</button>
+        </section>
+
+        <!-- Recipe of the Day Section -->
+        <section class="recipe-of-the-day">
+            <h2>Recipe of the Day</h2>
+            <div class="recipe-card">
+                <img src="../static/意大利面.jpg" alt="Recipe of the Day">
+                <h3>Classic Tomato Pasta</h3>
+                <p>Author: Chen Jiahui | Rating: 4.8</p>
+                <p>Simple and easy to make, suitable for daily dinner.</p>
+                <button>View Details</button>
+            </div>
+        </section>
+
+        <section class="categories">
+            <h2>Popular Categories</h2>
+            <div class="category-grid">
+                <a href="/recipes/breakfast" class="category-item category-breakfast" aria-label="Browse breakfast recipes">Breakfast</a>
+                <a href="/recipes/lunch" class="category-item category-lunch" aria-label="Browse lunch recipes">Lunch</a>
+                <a href="/recipes/dinner" class="category-item category-dinner" aria-label="Browse dinner recipes">Dinner</a>
+                <a href="/recipes/desserts" class="category-item category-desserts" aria-label="Browse desserts recipes">Desserts</a>
+            </div>
+        </section>
+
+        <section class="latest-recipes">
+            <h2>Selected Recipes</h2>
+            <div class="tabs">
+                <span>Latest Releases</span>
+                <span>Most Popular</span>
+            </div>
+            <div class="recipe-grid">
+                <div class="recipe-card">
+                    <h3>Classic Tomato Pasta</h3>
+                    <p>Chen Jiahui</p>
+                    <span>4.8</span>
+                </div>
+                <div class="recipe-card">
+                    <h3>Pan-Fried Salmon with Seasonal Vegetables</h3>
+                    <p>Wang Siyuan</p>
+                    <span>4.9</span>
+                </div>
+                <div class="recipe-card">
+                    <h3>Colorful Fruit Energy Bowl</h3>
+                    <p>Lin Meiqi</p>
+                    <span>4.7</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="themes">
+            <h2>Selected Themes</h2>
+            <div class="theme-grid">
+                <a href="/themes/healthy" class="theme-item theme-healthy" aria-label="Explore healthy light meals">
+                    <h3>Healthy Light Meals</h3>
+                    <p>Discover new ways of delicious and healthy eating</p>
+                </a>
+                <a href="/themes/traditional" class="theme-item theme-traditional" aria-label="Explore traditional cuisine">
+                    <h3>Traditional Cuisine</h3>
+                    <p>Inherit classics, taste the flavor of home</p>
+                </a>
+            </div>
+        </section>
+
+        <section class="authors">
+            <h2>Recommended Authors</h2>
+            <a href="#">View More</a>
+            <div class="author-grid">
+                <div class="author-card">
+                    <h3>Zhang Meichu</h3>
+                    <p>Michelin Star Chef</p>
+                    <button>Follow</button>
+                </div>
+                <div class="author-card">
+                    <h3>Li Tiandian</h3>
+                    <p>Famous Pastry Chef</p>
+                    <button>Follow</button>
+                </div>
+                <div class="author-card">
+                    <h3>Wang Jiachang</h3>
+                    <p>Home Cooking Expert</p>
+                    <button>Follow</button>
+                </div>
+                <div class="author-card">
+                    <h3>Liu Chuangyi</h3>
+                    <p>Creative Cuisine Expert</p>
+                    <button>Follow</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <h2>Discover Deliciousness, Share Happiness</h2>
+        <div class="footer-sections">
+            <div>
+                <h3>About Us</h3>
+                <ul>
+                    <li>About Us</li>
+                    <li>Join Us</li>
+                    <li>Contact Us</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Help Center</h3>
+                <ul>
+                    <li>User Guide</li>
+                    <li>FAQ</li>
+                    <li>Feedback</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Follow Us</h3>
+                <ul>
+                    <li>Discord</li>
+                    <li>Facebook</li>
+                    <li>Instagram</li>
+                </ul>
+            </div>
+        </div>
     </footer>
 
-    <!-- Bootstrap JS for interactivity (optional) -->
+    <!-- Original Footer -->
+    <footer class="footer">
+        <p>© 2025 CS235 Recipe Portal | Created by tli637, UPI2, UPI3</p>
+    </footer>
+
+    <!-- JavaScript for Scroll Functionality -->
+    <script>
+        function scrollOnePage() {
+            window.scrollBy({
+                top: window.innerHeight,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+
+    <!-- Bootstrap JS for interactivity -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
