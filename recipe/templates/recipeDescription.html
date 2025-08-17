@@ -106,6 +106,74 @@
             </div>
         </section>
 
+
+        <section class="selected-recipes">
+            <h2>Selected Recipes</h2>
+            <div class="recipe-filter">
+                <button>Latest Releases</button>
+                <button>Most Popular</button>
+            </div>
+            <div class="recipe-list">
+                <div class="recipe-card" data-recipe-id="1">
+                    <h3>Classic Tomato Pasta</h3>
+                    <p>Chen Jiahui</p>
+                    <span>4.8</span>
+                    <button class="random-recipe-btn" aria-label="Generate Random Recipe">
+                        <i class="fas fa-dice"></i> <!-- Font Awesome dice icon -->
+                    </button>
+                </div>
+                <div class="recipe-card" data-recipe-id="2">
+                    <h3>Pan-Fried Salmon with Seasonal Vegetables</h3>
+                    <p>Wang Siyuan</p>
+                    <span>4.9</span>
+                    <button class="random-recipe-btn" aria-label="Generate Random Recipe">
+                        <i class="fas fa-dice"></i>
+                    </button>
+                </div>
+                <div class="recipe-card" data-recipe-id="3">
+                    <h3>Colorful Fruit Energy Bowl</h3>
+                    <p>Lin Meiqi</p>
+                    <span>4.7</span>
+                    <button class="random-recipe-btn" aria-label="Generate Random Recipe">
+                        <i class="fas fa-dice"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <script>
+            const recipes = [
+                { title: "Classic Tomato Pasta", author: "Chen Jiahui", rating: 4.8 },
+                { title: "Pan-Fried Salmon with Seasonal Vegetables", author: "Wang Siyuan", rating: 4.9 },
+                { title: "Colorful Fruit Energy Bowl", author: "Lin Meiqi", rating: 4.7 },
+                { title: "Spicy Chicken Curry", author: "Zhang Wei", rating: 4.6 },
+                { title: "Chocolate Lava Cake", author: "Li Tiandian", rating: 4.9 }
+            ];
+
+            function getRandomRecipe() {
+                const randomIndex = Math.floor(Math.random() * recipes.length);
+                return recipes[randomIndex];
+            }
+
+            document.querySelectorAll('.random-recipe-btn').forEach(button => {
+                button.addEventListener('click', (event) => {
+                    const recipeCard = event.target.closest('.recipe-card');
+                    if (!recipeCard) return;
+
+                    const randomRecipe = getRandomRecipe();
+                    const titleElement = recipeCard.querySelector('h3');
+                    const authorElement = recipeCard.querySelector('p');
+                    const ratingElement = recipeCard.querySelector('span');
+
+                    if (titleElement && authorElement && ratingElement) {
+                        titleElement.textContent = randomRecipe.title;
+                        authorElement.textContent = randomRecipe.author;
+                        ratingElement.textContent = randomRecipe.rating;
+                    }
+                });
+            });
+        </script>
+
         <section class="latest-recipes">
             <h2>Selected Recipes</h2>
             <div class="tabs">
